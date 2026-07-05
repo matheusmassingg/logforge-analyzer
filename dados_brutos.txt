@@ -1,0 +1,7 @@
+PROD001;Refrigerante Cola;4;5.90
+PROD002;Sabão em Pó;2;18.50
+ERROR_LOG;SISTEMA_TIMEOUT;0;0.00
+PROD003;Leite Integral UHT;12;4.20
+PROD001;Refrigerante Cola;1;5.90
+PROD004;Café Torrado 500g; ;14.90
+PROD002;Sabão em Pó;1;18.50
