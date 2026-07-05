@@ -7,7 +7,7 @@ def analisar_dados(caminho_arquivo, filtro=None, exportar=False):
         return
 
     print("\n" + "="*50)
-    print("   LOGFORGE ANALYZER v2.0 - PRODUÇÃO   ")
+    print("   LOGFORGE ANALYZER v2.1 - PRODUÇÃO   ")
     print("="*50)
     if filtro:
         print(f"Filtro Ativo: Aplicando busca por '{filtro}'")
@@ -48,7 +48,7 @@ def analisar_dados(caminho_arquivo, filtro=None, exportar=False):
                 total_faturamento += faturamento_linha
                 itens_processados += qty
                 
-                linhas_limpas.append(f"{id_prod};{nome_prod};{qty};{preco};{faturamento_linha}\n")
+                linhas_limpas.append(f"{id_prod};{nome_prod};{qty};{preco:.2f};{faturamento_linha:.2f}\n")
                 print(f"-> OK | {nome_prod[:18]:<18} | Qtd: {qty:<2} | Total: R$ {faturamento_linha:.2f}")
                 
             except (ValueError, IndexError):
@@ -60,8 +60,11 @@ def analisar_dados(caminho_arquivo, filtro=None, exportar=False):
     print("="*50)
     print(f"Total de itens vendidos : {itens_processados}")
     print(f"Faturamento Bruto Total : R$ {total_faturamento:.2f}")
+    
     if itens_processados > 0:
         print(f"Ticket Médio por Unidade: R$ {(total_faturamento / itens_processados):.2f}")
+    else:
+        print("Ticket Médio por Unidade: R$ 0.00")
     print("="*50)
 
     if exportar and linhas_limpas:
