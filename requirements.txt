@@ -1,0 +1,5 @@
+# O núcleo do LogForge Analyzer usa apenas a biblioteca padrão do Python.
+# Nenhuma dependência de runtime obrigatória.
+#
+# Para exportação em Excel (.xlsx), instale o extra opcional:
+#   pip install -e ".[excel]"

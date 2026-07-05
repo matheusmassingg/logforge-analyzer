@@ -1,3 +1,22 @@
+Metadata-Version: 2.4
+Name: logforge-analyzer
+Version: 3.0.0
+Summary: CLI para limpeza, filtragem e exportação de relatórios de vendas a partir de logs brutos.
+Author: matheusmassingg
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: excel
+Requires-Dist: openpyxl>=3.1; extra == "excel"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"
+Requires-Dist: ruff>=0.5; extra == "dev"
+
 # LogForge Analyzer
 
 CLI em Python para limpar, filtrar e exportar relatórios de vendas a partir de arquivos de dados brutos (`;`-separados), ignorando linhas de log de erro e linhas malformadas.
