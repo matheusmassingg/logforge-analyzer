@@ -1,1 +1,9 @@
-parser.py e report.py criados.cat
+001;Sabão em Pó;10;5.50
+002;Detergente;5;3.20
+ERROR_LOG;falha de conexão com sensor
+003;Sabão Neutro;abc;2.00
+
+004;Amaciante;3;
+005;Água Sanitária;-2;4.00
+006;Esponja de Aço;7;0
+=CMD;=SOMA(A1:A2);2;10.00
