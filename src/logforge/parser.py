@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 import logging
+from collections.abc import Iterator
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterator
 
 from .models import Venda
 
@@ -85,7 +85,9 @@ def _parsear_linha(numero: int, linha_bruta: str) -> Venda | LinhaIgnorada:
     if preco <= 0:
         return LinhaIgnorada(numero, linha_bruta, f"preço não positivo: {preco}")
 
-    return Venda(id_produto=id_prod, nome_produto=nome_prod, quantidade=quantidade, preco_unitario=preco)
+    return Venda(
+        id_produto=id_prod, nome_produto=nome_prod, quantidade=quantidade, preco_unitario=preco
+    )
 
 
 def ler_vendas(caminho_arquivo: str | Path) -> Iterator[Venda | LinhaIgnorada]:

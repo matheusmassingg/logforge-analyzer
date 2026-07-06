@@ -48,7 +48,8 @@ def construir_relatorio(itens: list[Venda | LinhaIgnorada], filtro: str | None =
 def formatar_linha_venda(venda: Venda) -> str:
     """Formata uma linha de venda para exibição no terminal."""
     nome_truncado = venda.nome_produto[:18]
-    return f"-> OK | {nome_truncado:<18} | Qtd: {venda.quantidade:<2} | Total: R$ {venda.faturamento:.2f}"
+    total = f"{venda.faturamento:.2f}"
+    return f"-> OK | {nome_truncado:<18} | Qtd: {venda.quantidade:<2} | Total: R$ {total}"
 
 
 def formatar_resumo(relatorio: Relatorio) -> str:

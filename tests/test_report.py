@@ -1,6 +1,6 @@
 from logforge.models import Venda
-from logforge.report import construir_relatorio, formatar_linha_venda, formatar_resumo
 from logforge.parser import LinhaIgnorada
+from logforge.report import construir_relatorio, formatar_linha_venda, formatar_resumo
 
 
 def _venda(nome="Produto", qtd=2, preco=10.0, id_="001"):
